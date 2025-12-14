@@ -1,7 +1,7 @@
 #Project Euler Q3
 #finding the largest prime factor for a given number.
 
-#first a prime number finder
+#first a prime number finder.
 
 #second find the factors of given that are prime numbers.
 #logic of finding prime factors in english:
