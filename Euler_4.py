@@ -1,36 +1,59 @@
+#Project Euler Q4
+#finds the largest porduct of two 3 digit numbers that is a pallendrome.
 
+numMin = 1
 numMax = 9
+prods = []
 mults = []
 
 #finds all products of two values with a given max.
-for i_1 in range(1,numMax+1):
-    for i_2 in range(1,numMax+1):
-        mult = i_1 * i_2
+for i_1 in range(numMin,numMax+1):
+    for i_2 in range(numMin,numMax+1):
+        prod = i_1 * i_2
         #print(i_1, "x", i_2)
-        mults.append(mult)
+        prods.append(prod)
+        mults.append(i_1)
+        mults.append(i_2)
 
-#sorting list made above.
-mults.sort() #organizes values from smallest - biggest.
-mults = list(set(mults)) #makes it a set which can not have dublicates, then converts back to list.
-multsStr = str(mults)
+#sorting the list of prods made above.
+prods.sort() #organizes values from smallest - biggest.
+prods = list(set(prods)) #makes it a set which can not have dublicates, then converts back to list.
 
 #housekeeping for sublists.
-mults_1 = []
-mults_2 = []
-mults_3 = []
+prods_1 = []
+prods_2 = []
+prods_3 = []
+prods_4 = []
+prods_5 = []
+prods_6 = []
+
 i_digit = 0
 
 #orders lists into sublists by number of digits.
-for i in enumerate(mults):
-    if len(str(mults[i_digit])) == 1:
-        mults_1.append(mults[i_digit])
-    elif len(str(mults[i_digit])) == 2:
-        mults_2.append(mults[i_digit])
-    elif len(str(mults[i_digit])) == 3:
-        mults_3.append(mults[i_digit])
+for i in enumerate(prods):
+    if len(str(prods[i_digit])) == 1:
+        prods_1.append(int(prods[i_digit]))
+    elif len(str(prods[i_digit])) == 2:
+        prods_2.append(int(prods[i_digit]))
+    elif len(str(prods[i_digit])) == 3:
+        prods_3.append(int(prods[i_digit]))
+    elif len(str(prods[i_digit])) == 4:
+        prods_4.append(int(prods[i_digit]))
+    elif len(str(prods[i_digit])) == 5:
+        prods_5.append(int(prods[i_digit]))
+    elif len(str(prods[i_digit])) == 6:
+        prods_6.append(int(prods[i_digit]))
     i_digit += 1
 
 #outputs
-print("1 digit:",mults_1)
-print("2 digit:",mults_2)
-print("3 digit:",mults_3)
+print(prods)
+print(mults)
+
+for testProd in prods:
+    x= x
+
+#Create code that finds the index of the mults that make a given prod. (i.e. index of prod *2, +1?)
+
+#print("1 digit:",prods_1)
+#print("2 digit:",prods_2)
+#print("3 digit:",prods_3)
