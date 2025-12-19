@@ -15,9 +15,9 @@ for i_1 in range(numMin,numMax+1):
 
 #housekeeping for pallendrome list.
 prodsPal = []
-
 indexProd = 0
 
+#reverses each product value as a string and if it equals its orignal, it is a pallendrome.
 for i_prods in prods:
     testProd = str(i_prods)
     revProd = testProd[::-1]
@@ -25,5 +25,5 @@ for i_prods in prods:
         prodsPal.append(i_prods)
     indexProd += 1
 
-#outputs
+#outputs largest number in pallendrome list.
 print(max(prodsPal))
